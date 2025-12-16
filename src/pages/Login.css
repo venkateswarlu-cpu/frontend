@@ -1,0 +1,94 @@
+/* Shared auth background */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+    circle at top,
+    rgb(180, 200, 255),
+    rgb(120, 150, 255),
+    rgb(90, 110, 220)
+  );
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Card */
+.auth-card {
+  background: white;
+  width: 360px;
+  padding: 35px 40px;
+  border-radius: 20px;
+  text-align: center;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.7s ease;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title */
+.auth-card h2 {
+  margin-bottom: 25px;
+  font-size: 1.9rem;
+  color: #333;
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.auth-card input:focus {
+  border-color: rgb(90, 110, 220);
+  box-shadow: 0 0 0 3px rgba(90, 110, 220, 0.2);
+}
+
+/* Button */
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    rgb(255, 140, 0),
+    rgb(255, 200, 0)
+  );
+
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
